@@ -1,0 +1,12 @@
+version: '3'
+services:
+  timeservice:
+    build: ./TimeFlask
+    ports:
+    - "80:8000"
+    volumes:
+      - ~/Desktop/ComposeWork/logger.txt:/app/Logger.txt
+  loggerservice:
+    build: ./Logger
+    ports:
+    - "81:8001"
